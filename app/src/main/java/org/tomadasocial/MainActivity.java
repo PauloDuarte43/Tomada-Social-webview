@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onReceivedError(WebView view, int errorCode,
-                                    String description, String failingUrl) {
+        public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
 
             Toast toast = Toast.makeText(getBaseContext(),
                     "Error: No connection to Internet", Toast.LENGTH_SHORT);
@@ -46,8 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class GeoWebChromeClient extends WebChromeClient {
         @Override
-        public void onGeolocationPermissionsShowPrompt(String origin,
-                                                       GeolocationPermissions.Callback callback) {
+        public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
             callback.invoke(origin, true, false);
         }
 
